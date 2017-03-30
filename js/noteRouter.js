@@ -29,7 +29,7 @@
 				collection: this.collection,
 				model: new APP.NoteModel()
 			});
-			console.log(view);
+			// console.log(view);
 			this.$container.html(view.render().el);
 		},
 
