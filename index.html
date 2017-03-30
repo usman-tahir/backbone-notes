@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="page-header">
+    <div class="page-header text-center">
       <h1>Backbone Notes</h1>
       <p class="lead">
         Manage your notes in just a few simple steps.
@@ -62,13 +62,13 @@
 
     <% _.each(notes, function (note) { %>
     <dl class="dl-horizontal">
-      <dt>Title</dt>
+      <dt><strong>Title</strong></dt>
       <dd><%= note.title %></dd>
 
-      <dt>Author</dt>
+      <dt><strong>Author</strong></dt>
       <dd><%= note.author %></dd>
 
-      <dt>Description</dt>
+      <dt><strong>Description</strong></dt>
       <dd><%= note.description %></dd>
 
       <dt>&nbsp;</dt>
