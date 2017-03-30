@@ -8,7 +8,7 @@
 			'note/new': 'create',
 			'notes/index': 'index',
 			'note/:id/edit': 'edit',
-			'notes/:id/delete': 'delete'
+			'note/:id/delete': 'delete'
 		},
 
 		$container: $('#primary-content'),

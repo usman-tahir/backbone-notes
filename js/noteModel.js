@@ -32,7 +32,7 @@
 	});
 
 	APP.NoteCollection = Backbone.Collection.extend({
-		localStorage: new Backbone.LocalStorage('Note Collection'),
+		localStorage: new Backbone.LocalStorage('NoteCollection'),
 		model: APP.NoteModel,
 	});
 }());
