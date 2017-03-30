@@ -22,6 +22,66 @@
     </div>
   </div>
 
+  <!-- JavaScript templates -->
+  <!-- Form used for create/edit functionality -->
+  <script type="text/jst" id="formTemplate">
+    <div class="well">
+      <div class="alert alert-danger fade in">
+        <form>
+          <h2><%= title %></h2>
+          <div class="form-group">
+            <label>Title:</label>
+            <input type="text" class="form-control" name="title" value="<%= title %>">
+          </div>
+          <div class="form-group">
+            <label>Author:</label>
+            <input type="text" class="form-control" name="author" value="<%= author %>">
+          </div>
+          <div class="form-group">
+            <label>Description:</label>
+            <textarea class="form-control" rows="5" name="description">
+              <%= description %>
+            </textarea>
+          </div>
+          <button class="save btn btn-large btn-info" type="submit">Save</button>
+          <a href="#notes/index" class="btn btn-large btn-default">Cancel</a>
+        </form>
+      </div>
+    </div>
+  </script>
+
+  <!-- index container -->
+  <script type="text/template" id="indexTemplate">
+    <div class="well">
+      <a class="btn btn-block btn-large btn-info" href="#note/new">Create new Note</a>
+    </div>
+
+    <% if (_.isEmpty(notes)) { %>
+      <div class="alert alert-warning">
+        <p>There are currently no notes. Try creating some.</p>
+      </div>
+    <% } %>
+
+    <% _.each(notes, function (note) { %>
+    <dl class="dl-horizontal">
+      <dt>Title</dt>
+      <dd><%= note.title %></dd>
+
+      <dt>Author</dt>
+      <dd><%= note.author %></dd>
+
+      <dt>Description</dt>
+      <dd><%= note.description %></dd>
+
+      <dt>&nbsp;</dt>
+      <dd>
+        <a class="btn btn-xs btn-info" href="#note/<%= note.id %>/edit">Edit</a>
+        <a class="btn btn-xs btn-info" href="#note/<%= note.id %>/delete">Delete</a>
+      </dd>
+    </dl>
+    <% }); %>
+  </script>
+
   <!-- Required libraries -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
