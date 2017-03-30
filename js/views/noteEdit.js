@@ -41,7 +41,7 @@
 		// Populate the HTML of the note to the DOM
 		render: function () {
 			this.$el.html(
-				this.template(this.model.toJSON());
+				this.template(this.model.toJSON())
 			);
 			return this;
 		}
