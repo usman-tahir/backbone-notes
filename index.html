@@ -5,11 +5,6 @@
 
   <!-- Boostrap Styling -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all">
-  <style>
-    .hide {
-      display: none;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -32,7 +27,7 @@
   <!-- Form used for create/edit functionality -->
   <script type="text/jst" id="formTemplate">
     <div class="well">
-      <div class="alert alert-danger fade in hide"></div>
+      <div class="alert alert-danger fade in" style="display: none;"></div>
       <form>
         <h2><%= title %></h2>
         <div class="form-group">
@@ -45,9 +40,7 @@
         </div>
         <div class="form-group">
           <label>Description:</label>
-          <textarea class="form-control" rows="5" name="description">
-            <%= description %>
-          </textarea>
+          <textarea class="form-control" rows="5" name="description"><%= description %></textarea>
         </div>
         <button class="save btn btn-large btn-info" type="submit">Save</button>
         <a href="#notes/index" class="btn btn-large btn-default">Cancel</a>
